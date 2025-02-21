@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code لحساب إنستغرام</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f3f3f3, #e9e9e9);
+            font-family: Arial, sans-serif;
+        }
+        .qr-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        canvas {
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .username {
+            font-size: 18px;
+            color: #c32aa3; /* لون إنستغرام */
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-container">
+        <h1>تواصل معي على إنستغرام</h1>
+        <canvas id="qr-code"></canvas>
+        <div class="username">_DQ8Q</div>
+    </div>
+
+    <script>
+        var qr = new QRious({
+            element: document.getElementById('qr-code'),
+            value: 'https://www.instagram.com/_dq8q/',
+            size: 250,
+            background: 'white',
+            foreground: '#c32aa3' // لون إنستغرام
+        });
+    </script>
+</body>
+</html>
